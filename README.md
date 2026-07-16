@@ -21,3 +21,4 @@ OpenRDM provides tools and patterns to:
 ## Why It Matters
 
 Modern software installation often looks like this:
+https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybmk2cnRsOW5sMThzMzVlN3duanIxdjYyZXJtdThiMHBpankyZHl2NiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9o9dh1JRGThC1qxGTJ/giphy.gif
