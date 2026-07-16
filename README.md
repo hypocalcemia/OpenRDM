@@ -2,13 +2,25 @@
 
 **Open Release & Delivery Manifest** — Making software delivery transparent, debuggable, and developer-friendly.
 
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 ## Overview
 
-OpenRDM is a framework for reverse-engineering, documenting, and transparently managing complex software delivery pipelines. It emerged from analyzing real-world installer chains (like Visual Studio) to understand how software components are bootstrapped, manifested, and deployed.
+OpenRDM is a framework for reverse-engineering, documenting, and transparently managing complex software delivery pipelines. It emerged from analyzing real-world installer chains (like Visual Studio bootstrappers) where users have no visibility into what gets downloaded, when, or why.
 
-The goal: developers should understand *exactly* what gets downloaded, when, and why—not blackbox installers that phone home to mysterious URLs.
+The goal is simple: **developers should understand exactly what gets downloaded, when, and why** — not rely on blackbox installers that phone home to mysterious URLs.
 
-## What It Does
+## The Problem
+
+Modern software installation is often opaque:
+
+- **Unknown dependencies**: You run an installer and have no idea what components are being pulled in
+- **Supply chain blindness**: No clear record of sources, versions, or checksums
+- **Reproducibility issues**: Different machines install different versions due to silent updates
+- **Security concerns**: Hard to audit what's being downloaded and verify its authenticity
+- **Debugging nightmare**: When something breaks, you can't trace back through the delivery chain
+
+## What OpenRDM Solves
 
 OpenRDM provides tools and patterns to:
 
@@ -16,9 +28,4 @@ OpenRDM provides tools and patterns to:
 - **Document** the supply chain transparently (manifest files, channels, URIs, hashes)
 - **Trace** dependencies and component relationships in complex builds
 - **Audit** what gets delivered and ensure reproducibility
-- **Share** clear documentation so other developers can understand your pipeline
-
-## Why It Matters
-
-Modern software installation often looks like this:
-https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybmk2cnRsOW5sMThzMzVlN3duanIxdjYyZXJtdThiMHBpankyZHl2NiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9o9dh1JRGThC1qxGTJ/giphy.gif
+- **Share** clear documentation so other developers can understand and verify your pipeline
